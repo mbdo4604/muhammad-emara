@@ -100,17 +100,17 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="mt-auto">
-            <div className="grid grid-cols-5 items-end gap-2">
+          <div className="mt-auto flex justify-center pb-1">
+            <div className="flex items-end">
               {site.brandBar.map((item, index) => (
                 <div
                   key={`${item.letter}-${item.label}-${index}`}
-                  className="flex min-w-0 flex-col items-center gap-2.5"
+                  className="relative flex flex-col items-center"
                 >
-                  <span className="caps w-full text-center text-[0.78rem] leading-[1.2] tracking-[0.12em] text-white lg:text-[0.85rem]">
+                  <span className="caps absolute bottom-[100%] left-1/2 mb-2.5 -translate-x-1/2 whitespace-nowrap text-[0.78rem] leading-[1.2] tracking-[0.12em] text-white lg:text-[0.85rem]">
                     {item.label}
                   </span>
-                  <span className="display text-center text-[clamp(2.6rem,11vw,13rem)] leading-[0.8] tracking-[-0.045em] text-white">
+                  <span className="display inline-block px-[0.02em] text-[clamp(3rem,10.5vw,12rem)] leading-[0.78] tracking-[-0.09em] text-white">
                     {item.letter}
                   </span>
                 </div>
