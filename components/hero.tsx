@@ -9,7 +9,7 @@ import { site } from "@/content/site";
  */
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-[var(--forma-red)]">
+    <section className="relative h-dvh max-h-dvh overflow-hidden bg-[var(--forma-red)] xl:h-auto xl:max-h-none xl:min-h-svh">
       <div className="pointer-events-none absolute inset-0">
         <Image
           src="/images/portrait-mobile.png"
@@ -36,10 +36,10 @@ export function Hero() {
         />
       </div>
 
-      <div className="shell relative z-10 flex min-h-[100svh] flex-col pb-7 pt-[4.25rem] xl:pb-8 xl:pt-24">
-        <div className="flex flex-1 flex-col xl:hidden">
-          <div className="max-w-[22rem] pt-1">
-            <h1 className="display text-[clamp(1.85rem,8.6vw,2.65rem)] leading-[0.96] text-white">
+      <div className="shell relative z-10 flex h-full min-h-0 flex-col pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-[4.25rem] xl:min-h-[100svh] xl:pb-8 xl:pt-24">
+        <div className="flex min-h-0 flex-1 flex-col xl:hidden">
+          <div className="max-w-[22rem] shrink-0 pt-1">
+            <h1 className="display text-[clamp(1.55rem,6.5vw,2.4rem)] leading-[0.96] text-white">
               {site.hero.headline.map((line, i) => (
                 <span key={line}>
                   {i > 0 ? <br /> : null}
@@ -49,10 +49,11 @@ export function Hero() {
             </h1>
           </div>
 
-          <div className="min-h-[42vh] flex-1" aria-hidden="true" />
+          {/* Grows/shrinks with phone height */}
+          <div className="min-h-0 flex-1" aria-hidden="true" />
 
           {/* Mobile EMARA — tight even spacing (same as M–A), no overlap */}
-          <div className="flex w-full justify-center">
+          <div className="flex w-full shrink-0 justify-center pb-1">
             <div className="flex items-end">
               {site.brandBar.map((item, index) => (
                 <div
@@ -62,7 +63,7 @@ export function Hero() {
                   <span className="caps absolute bottom-[100%] left-1/2 mb-1.5 -translate-x-1/2 whitespace-nowrap text-[0.42rem] leading-[1.1] tracking-[0.05em] text-white/55">
                     {item.label}
                   </span>
-                  <span className="brand-mark brand-mark-mobile inline-block text-[clamp(3.2rem,18vw,5.2rem)] leading-[0.8] text-white">
+                  <span className="brand-mark brand-mark-mobile inline-block text-[clamp(2.6rem,12svh,4.8rem)] leading-[0.8] text-white">
                     {item.letter}
                   </span>
                 </div>
@@ -86,7 +87,7 @@ export function Hero() {
 
             <div className="flex flex-col items-end justify-center pt-16">
               <p className="hero-quote max-w-[28rem] text-right text-[clamp(1.15rem,1.7vw,1.55rem)] leading-[1.35] text-white">
-                {site.hero.quote.map((line, i) => (
+                {site.hero.quote.map((line) => (
                   <span key={line} className="block">
                     {line}
                   </span>
