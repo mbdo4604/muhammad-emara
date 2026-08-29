@@ -72,7 +72,7 @@ export function Hero() {
 
         <div className="hidden min-h-0 flex-1 flex-col xl:flex">
           <div className="grid flex-1 grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] items-center gap-10">
-            <div className="max-w-[26rem]">
+            <div className="max-w-[30rem]">
               <h1 className="display text-[clamp(1.85rem,3.1vw,3.2rem)] leading-[0.98] text-white">
                 {site.hero.headline.map((line, i) => (
                   <span key={line}>
@@ -81,13 +81,13 @@ export function Hero() {
                   </span>
                 ))}
               </h1>
-              <p className="caps mt-5 max-w-[22rem] text-[0.66rem] leading-[1.6] tracking-[0.12em] text-white/85">
+              <p className="mt-7 max-w-[28rem] text-[clamp(1.05rem,1.55vw,1.4rem)] font-medium leading-[1.4] tracking-[0.01em] text-white">
                 {site.hero.subline}
               </p>
             </div>
 
             <div className="flex flex-col items-end justify-center pt-16">
-              <p className="caps max-w-[24rem] text-right text-[0.68rem] leading-[1.65] tracking-[0.11em] text-white/90">
+              <p className="max-w-[28rem] text-right text-[clamp(1.05rem,1.55vw,1.4rem)] font-medium leading-[1.4] tracking-[0.01em] text-white">
                 {site.hero.description}
               </p>
               <a

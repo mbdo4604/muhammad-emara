@@ -23,11 +23,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 0.55,
-      // Phone: syncTouch was off before → native scroll felt too light/fast
+      // Phone: smooth + moderately heavy (not as locked as before)
       syncTouch: isPhone,
-      syncTouchLerp: 0.035,
-      touchMultiplier: isPhone ? 0.1 : 0.45,
-      touchInertiaExponent: isPhone ? 3.2 : 1.7,
+      syncTouchLerp: 0.055,
+      touchMultiplier: isPhone ? 0.22 : 0.45,
+      touchInertiaExponent: isPhone ? 2.2 : 1.7,
     });
 
     (window as Window & { __lenis?: Lenis }).__lenis = lenis;
