@@ -19,7 +19,9 @@ export function About() {
             </div>
             <div className="md:text-right">
               <p className="display text-[1.15rem] tracking-[0.04em] md:text-[1.35rem]">
-                {site.name.toUpperCase()}
+                <span>MUHAMMAD</span>
+                <span className="inline-block w-[0.55em]" aria-hidden="true" />
+                <span>EMARA</span>
               </p>
               <p className="caps mt-2 text-[0.58rem] tracking-[0.14em] text-white/65">
                 {site.about.role} · {site.about.based}
