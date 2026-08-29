@@ -58,7 +58,7 @@ export function Hero() {
                   key={`m-${item.letter}-${index}`}
                   className="flex min-w-0 flex-col items-center gap-2"
                 >
-                  <span className="caps w-full text-center text-[0.52rem] leading-[1.15] tracking-[0.08em] text-white/45">
+                  <span className="caps w-full text-center text-[0.52rem] leading-[1.15] tracking-[0.08em] text-white/55">
                     {item.label}
                   </span>
                   <span className="display text-center text-[clamp(2.4rem,14vw,4.2rem)] leading-[0.82] tracking-[-0.04em] text-white">
@@ -107,7 +107,7 @@ export function Hero() {
                   key={`${item.letter}-${item.label}-${index}`}
                   className="relative flex flex-col items-center"
                 >
-                  <span className="caps absolute bottom-[100%] left-1/2 mb-2.5 -translate-x-1/2 whitespace-nowrap text-[0.78rem] leading-[1.2] tracking-[0.12em] text-white lg:text-[0.85rem]">
+                  <span className="caps absolute bottom-[100%] left-1/2 mb-2.5 -translate-x-1/2 whitespace-nowrap text-[0.78rem] leading-[1.2] tracking-[0.12em] text-white/65 lg:text-[0.85rem]">
                     {item.label}
                   </span>
                   <span className="display inline-block px-[0.02em] text-[clamp(3rem,10.5vw,12rem)] leading-[0.78] tracking-[-0.09em] text-white">
