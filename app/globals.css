@@ -116,8 +116,16 @@ a img {
 }
 
 .brand-mark-hero {
-  /* Keep optical weight without stroke — stroke was crushing E's crossbar */
   font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mobile: heavy, edge-to-edge, letters locked together */
+.brand-mark-mobile {
+  font-weight: 700;
+  letter-spacing: -0.14em;
+  transform: scaleX(1.18) scaleY(1.08);
+  transform-origin: center bottom;
   -webkit-font-smoothing: antialiased;
 }
 
