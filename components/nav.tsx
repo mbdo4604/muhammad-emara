@@ -190,7 +190,7 @@ export function Nav() {
             {site.brand}
           </Link>
 
-          <nav className="hidden items-center gap-7 xl:flex xl:gap-9">
+          <nav className="hidden items-center gap-7 md:flex md:gap-8 lg:gap-9">
             {site.nav.map((item) => (
               <a
                 key={item.href}
@@ -204,7 +204,7 @@ export function Nav() {
 
           <button
             type="button"
-            className="relative z-[130] flex h-10 w-10 items-center justify-center xl:hidden"
+            className="relative z-[130] flex h-10 w-10 items-center justify-center md:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={toggleMenu}
@@ -234,7 +234,7 @@ export function Nav() {
         {open ? (
           <motion.div
             key="mobile-menu"
-            className="fixed inset-0 z-[110] flex flex-col bg-[var(--forma-red)] px-5 pb-6 pt-[4.25rem] xl:hidden"
+            className="fixed inset-0 z-[110] flex flex-col bg-[var(--forma-red)] px-5 pb-6 pt-[4.25rem] md:hidden"
             variants={panel}
             initial="hidden"
             animate="visible"

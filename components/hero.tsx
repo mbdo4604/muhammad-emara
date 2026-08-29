@@ -9,7 +9,7 @@ import { site } from "@/content/site";
  */
 export function Hero() {
   return (
-    <section className="relative h-dvh max-h-dvh overflow-hidden bg-[var(--forma-red)] xl:h-auto xl:max-h-none xl:min-h-svh">
+    <section className="relative h-dvh max-h-dvh overflow-hidden bg-[var(--forma-red)] md:h-auto md:max-h-none md:min-h-svh">
       <div className="pointer-events-none absolute inset-0">
         <Image
           src="/images/portrait-mobile.png"
@@ -19,8 +19,8 @@ export function Hero() {
           quality={100}
           unoptimized
           draggable={false}
-          sizes="(max-width: 1279px) 100vw, 0px"
-          className="object-cover object-[center_28%] xl:hidden"
+          sizes="(max-width: 767px) 100vw, 0px"
+          className="object-cover object-[center_28%] md:hidden"
         />
         <Image
           src="/images/portrait.png"
@@ -30,14 +30,14 @@ export function Hero() {
           quality={100}
           unoptimized
           draggable={false}
-          sizes="(min-width: 1280px) 100vw, 0px"
-          className="hidden object-cover object-[78%_18%] xl:block"
+          sizes="(min-width: 768px) 100vw, 0px"
+          className="hidden object-cover object-[78%_18%] md:block"
           aria-hidden
         />
       </div>
 
-      <div className="shell relative z-10 flex h-full min-h-0 flex-col pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-[4.25rem] xl:min-h-[100svh] xl:pb-8 xl:pt-24">
-        <div className="flex min-h-0 flex-1 flex-col xl:hidden">
+      <div className="shell relative z-10 flex h-full min-h-0 flex-col pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-[4.25rem] md:min-h-[100svh] md:pb-8 md:pt-24">
+        <div className="flex min-h-0 flex-1 flex-col md:hidden">
           <div className="max-w-[22rem] shrink-0 pt-1">
             <h1 className="display text-[clamp(1.55rem,6.5vw,2.4rem)] leading-[0.96] text-white">
               {site.hero.headline.map((line, i) => (
@@ -72,8 +72,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hidden min-h-0 flex-1 flex-col xl:flex">
-          <div className="grid flex-1 grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] items-center gap-10">
+        <div className="hidden min-h-0 flex-1 flex-col md:flex">
+          <div className="grid flex-1 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)]">
             <div className="max-w-[30rem]">
               <h1 className="display text-[clamp(1.85rem,3.1vw,3.2rem)] leading-[0.98] text-white">
                 {site.hero.headline.map((line, i) => (
@@ -85,8 +85,8 @@ export function Hero() {
               </h1>
             </div>
 
-            <div className="flex flex-col items-end justify-center pt-16">
-              <p className="hero-quote max-w-[28rem] text-right text-[clamp(1.15rem,1.7vw,1.55rem)] leading-[1.35] text-white">
+            <div className="flex flex-col items-start justify-center pt-6 lg:items-end lg:pt-16">
+              <p className="hero-quote max-w-[28rem] text-left text-[clamp(1.15rem,1.7vw,1.55rem)] leading-[1.35] text-white lg:text-right">
                 {site.hero.quote.map((line) => (
                   <span key={line} className="block">
                     {line}
