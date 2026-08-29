@@ -107,7 +107,7 @@ export function Hero() {
                   key={`${item.letter}-${item.label}-${index}`}
                   className="flex min-w-0 flex-col items-center gap-2.5"
                 >
-                  <span className="caps w-full text-center text-[0.62rem] leading-[1.2] tracking-[0.12em] text-white/45 lg:text-[0.68rem]">
+                  <span className="caps w-full text-center text-[0.78rem] leading-[1.2] tracking-[0.12em] text-white lg:text-[0.85rem]">
                     {item.label}
                   </span>
                   <span className="display text-center text-[clamp(2.6rem,11vw,13rem)] leading-[0.8] tracking-[-0.045em] text-white">
