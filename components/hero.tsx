@@ -51,18 +51,18 @@ export function Hero() {
 
           <div className="min-h-[42vh] flex-1" aria-hidden="true" />
 
-          {/* Full-bleed EMARA — fills phone width, no letter gaps */}
-          <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2">
-            <div className="flex w-full items-end gap-0">
+          {/* Full-bleed EMARA — spans phone width, letters evenly spaced (no overlap) */}
+          <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 px-2">
+            <div className="grid w-full grid-cols-5 items-end gap-0">
               {site.brandBar.map((item, index) => (
                 <div
                   key={`m-${item.letter}-${index}`}
-                  className="flex min-w-0 flex-1 flex-col items-center gap-1.5"
+                  className="flex min-w-0 flex-col items-center gap-1.5"
                 >
-                  <span className="caps w-full px-0.5 text-center text-[0.48rem] leading-[1.1] tracking-[0.06em] text-white/55">
+                  <span className="caps w-full text-center text-[0.42rem] leading-[1.1] tracking-[0.05em] text-white/55">
                     {item.label}
                   </span>
-                  <span className="brand-mark brand-mark-mobile block w-full text-center text-[clamp(3.8rem,22vw,6.5rem)] leading-[0.78] text-white">
+                  <span className="brand-mark brand-mark-mobile block w-full text-center text-[clamp(2.8rem,17vw,4.8rem)] leading-[0.82] tracking-normal text-white">
                     {item.letter}
                   </span>
                 </div>

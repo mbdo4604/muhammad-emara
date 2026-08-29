@@ -120,12 +120,10 @@ a img {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Mobile: heavy, edge-to-edge, letters locked together */
+/* Mobile: large across full width, clean Syncopate (no crush/overlap) */
 .brand-mark-mobile {
   font-weight: 700;
-  letter-spacing: -0.14em;
-  transform: scaleX(1.18) scaleY(1.08);
-  transform-origin: center bottom;
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
 }
 
