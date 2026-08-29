@@ -19,8 +19,8 @@
   --color-ink: var(--forma-ink);
   --color-muted: var(--forma-muted);
   --color-line: var(--forma-line);
-  --font-display: var(--font-syncopate);
-  --font-body: var(--font-manrope);
+  --font-display: var(--font-lama-expanded);
+  --font-body: var(--font-lama);
   --font-quote: var(--font-lama-expanded);
 }
 
@@ -50,7 +50,7 @@ body {
   min-height: 100vh;
   background: var(--forma-red);
   color: var(--forma-white);
-  font-family: var(--font-manrope), system-ui, sans-serif;
+  font-family: var(--font-lama), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   user-select: none;
   -webkit-user-select: none;
@@ -96,9 +96,9 @@ a img {
   }
 }
 
-/* FORMA-like wide display */
+/* Lama Expanded display */
 .display {
-  font-family: var(--font-syncopate), sans-serif;
+  font-family: var(--font-lama-expanded), sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 0.95;
@@ -106,7 +106,7 @@ a img {
 }
 
 .caps {
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-lama), sans-serif;
   font-weight: 500;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -114,7 +114,7 @@ a img {
 
 .hero-quote {
   font-family: var(--font-lama-expanded), sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.01em;
 }
 
@@ -129,7 +129,7 @@ a img {
   background: #ffffff;
   background-color: #ffffff;
   color: #1a0508;
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-lama), sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -148,7 +148,7 @@ a img {
 }
 
 .menu-link {
-  font-family: var(--font-syncopate), sans-serif;
+  font-family: var(--font-lama-expanded), sans-serif;
   font-weight: 700;
   font-size: clamp(1.85rem, 8.5vw, 3.1rem);
   letter-spacing: -0.02em;
@@ -188,7 +188,7 @@ a img {
   align-items: center;
   justify-content: center;
   border: 1.5px solid #fff;
-  font-family: var(--font-syncopate), sans-serif;
+  font-family: var(--font-lama-expanded), sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   line-height: 1;

@@ -1,36 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Syncopate, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import { Providers } from "@/components/providers";
 import { site } from "@/content/site";
 import "./globals.css";
 
-const syncopate = Syncopate({
-  subsets: ["latin"],
-  variable: "--font-syncopate",
-  weight: ["400", "700"],
-  display: "swap",
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["400", "500", "600", "700"],
+const lama = localFont({
+  src: [
+    { path: "./fonts/LamaSans-Light.ttf", weight: "300", style: "normal" },
+    { path: "./fonts/LamaSans-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/LamaSans-Medium.ttf", weight: "500", style: "normal" },
+    { path: "./fonts/LamaSans-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "./fonts/LamaSans-Bold.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-lama",
   display: "swap",
 });
 
 const lamaExpanded = localFont({
   src: [
-    {
-      path: "./fonts/LamaSans-ExtraLightExpanded.ttf",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "./fonts/LamaSans-LightExpanded.ttf",
-      weight: "300",
-      style: "normal",
-    },
+    { path: "./fonts/LamaSans-LightExpanded.ttf", weight: "300", style: "normal" },
+    { path: "./fonts/LamaSans-RegularExpanded.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/LamaSans-MediumExpanded.ttf", weight: "500", style: "normal" },
+    { path: "./fonts/LamaSans-SemiBoldExpanded.ttf", weight: "600", style: "normal" },
+    { path: "./fonts/LamaSans-BoldExpanded.ttf", weight: "700", style: "normal" },
   ],
   variable: "--font-lama-expanded",
   display: "swap",
@@ -66,7 +58,7 @@ export default function RootLayout({
     <html
       lang="en"
       dir="ltr"
-      className={`${syncopate.variable} ${manrope.variable} ${lamaExpanded.variable} h-full`}
+      className={`${lama.variable} ${lamaExpanded.variable} h-full`}
     >
       <body className="min-h-full bg-[var(--forma-red)] text-white antialiased">
         <Providers>{children}</Providers>
