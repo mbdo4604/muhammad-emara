@@ -4,7 +4,7 @@ import Image from "next/image";
 import { site } from "@/content/site";
 
 /**
- * Mobile: new portrait-mobile.jpg
+ * Mobile: portrait-mobile.png (full quality source)
  * Desktop: original portrait.png (pre-new-upload)
  */
 export function Hero() {
@@ -12,7 +12,7 @@ export function Hero() {
     <section className="relative min-h-[100svh] overflow-hidden bg-[var(--forma-red)]">
       <div className="pointer-events-none absolute inset-0">
         <Image
-          src="/images/portrait-mobile.jpg"
+          src="/images/portrait-mobile.png"
           alt="Muhammad Emara"
           fill
           priority
