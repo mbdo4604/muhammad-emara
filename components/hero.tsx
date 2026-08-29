@@ -38,13 +38,14 @@ export function Hero() {
 
       <div className="shell relative z-10 flex min-h-[100svh] flex-col pb-7 pt-[4.25rem] xl:pb-8 xl:pt-24">
         <div className="flex flex-1 flex-col xl:hidden">
-          <div className="max-w-[16rem] pt-1">
-            <h1 className="display text-[clamp(1.55rem,7.2vw,2.15rem)] leading-[0.98] text-white">
-              I DESIGN
-              <br />
-              PRODUCTS
-              <br />
-              PEOPLE USE.
+          <div className="max-w-[18rem] pt-1">
+            <h1 className="display text-[clamp(1.35rem,6.4vw,1.95rem)] leading-[0.98] text-white">
+              {site.hero.headline.map((line, i) => (
+                <span key={line}>
+                  {i > 0 ? <br /> : null}
+                  {line}
+                </span>
+              ))}
             </h1>
           </div>
 
@@ -57,7 +58,7 @@ export function Hero() {
                   key={`m-${item.letter}-${index}`}
                   className="flex flex-col items-center gap-1.5"
                 >
-                  <span className="caps text-center text-[0.42rem] leading-tight tracking-[0.08em] text-white/60">
+                  <span className="caps text-center text-[0.36rem] leading-tight tracking-[0.06em] text-white/60 sm:text-[0.4rem]">
                     {item.label}
                   </span>
                   <span className="display text-[clamp(2.4rem,14vw,4.2rem)] leading-[0.82] tracking-[-0.04em] text-white">
@@ -71,13 +72,14 @@ export function Hero() {
 
         <div className="hidden min-h-0 flex-1 flex-col xl:flex">
           <div className="grid flex-1 grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] items-center gap-10">
-            <div className="max-w-[22rem]">
-              <h1 className="display text-[clamp(2.1rem,3.4vw,3.55rem)] leading-[0.98] text-white">
-                I DESIGN
-                <br />
-                PRODUCTS
-                <br />
-                PEOPLE USE.
+            <div className="max-w-[26rem]">
+              <h1 className="display text-[clamp(1.85rem,3.1vw,3.2rem)] leading-[0.98] text-white">
+                {site.hero.headline.map((line, i) => (
+                  <span key={line}>
+                    {i > 0 ? <br /> : null}
+                    {line}
+                  </span>
+                ))}
               </h1>
               <p className="caps mt-5 max-w-[20rem] text-[0.66rem] leading-[1.6] tracking-[0.12em] text-white/85">
                 {site.hero.subline}
@@ -88,7 +90,10 @@ export function Hero() {
               <p className="caps max-w-[22rem] text-right text-[0.68rem] leading-[1.65] tracking-[0.11em] text-white/90">
                 {site.hero.description}
               </p>
-              <a href={`mailto:${site.email}`} className="btn-white mt-8">
+              <a
+                href={`mailto:${site.email}`}
+                className="btn-white mt-8 !bg-white !text-[#1a0508]"
+              >
                 {site.hero.cta}
               </a>
             </div>
@@ -101,7 +106,7 @@ export function Hero() {
                   key={`${item.letter}-${item.label}-${index}`}
                   className="flex flex-col items-center gap-2"
                 >
-                  <span className="caps text-center text-[0.48rem] leading-tight tracking-[0.12em] text-white/65 sm:text-[0.52rem]">
+                  <span className="caps text-center text-[0.44rem] leading-tight tracking-[0.1em] text-white/65 sm:text-[0.48rem]">
                     {item.label}
                   </span>
                   <span className="display text-[clamp(2.6rem,11vw,13rem)] leading-[0.8] tracking-[-0.045em] text-white">

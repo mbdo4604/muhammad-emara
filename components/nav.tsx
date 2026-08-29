@@ -281,7 +281,7 @@ export function Nav() {
 
               <a
                 href={`mailto:${site.email}`}
-                className="btn-white btn-white-full"
+                className="btn-white btn-white-full !bg-white !text-[#1a0508]"
                 onClick={closeMenu}
               >
                 {site.hero.cta}

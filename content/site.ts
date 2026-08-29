@@ -18,18 +18,18 @@ export const site = {
     { label: "CONTACTS", href: "#contact" },
   ],
   hero: {
-    headline: ["I DESIGN", "PRODUCTS", "PEOPLE USE."],
+    headline: ["IF IT'S NOT", "INTUITIVE,", "IT'S NOT DONE."],
     subline: "UI/UX DESIGN FOR PRODUCTS THAT REFUSE TO BLEND IN.",
     description:
       "I DESIGN, BUILD, AND SHIP INTERFACES THAT CAPTURE ATTENTION AND DRIVE RESULTS.",
     cta: "GET IN TOUCH",
   },
   brandBar: [
-    { letter: "E", label: "PRODUCT UI" },
-    { letter: "M", label: "UX FLOWS" },
-    { letter: "A", label: "SYSTEMS" },
-    { letter: "R", label: "MOBILE" },
-    { letter: "A", label: "IDENTITY" },
+    { letter: "E", label: "EXPERIENCE" },
+    { letter: "M", label: "MOBILE" },
+    { letter: "A", label: "ARCHITECTURE" },
+    { letter: "R", label: "RESEARCH" },
+    { letter: "A", label: "AESTHETICS" },
   ],
   work: {
     label: "PROJECTS",

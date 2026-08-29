@@ -13,7 +13,10 @@ export function Contact() {
           </h2>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a href={`mailto:${site.email}`} className="btn-white">
+            <a
+              href={`mailto:${site.email}`}
+              className="btn-white !bg-white !text-[#1a0508]"
+            >
               {site.contact.cta}
             </a>
             <a
