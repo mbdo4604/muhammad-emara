@@ -166,7 +166,7 @@ export function Nav() {
         const el = document.querySelector(href);
         if (!el) return;
         const lenis = (window as Window & { __lenis?: { scrollTo: (t: HTMLElement | number, o?: object) => void } }).__lenis;
-        if (lenis) lenis.scrollTo(el as HTMLElement, { offset: -8, duration: 2.1 });
+        if (lenis) lenis.scrollTo(el as HTMLElement, { offset: -8, duration: 2.8 });
         else el.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 320);
     }

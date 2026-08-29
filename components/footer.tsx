@@ -14,7 +14,7 @@ export function Footer() {
           className="caps text-left text-[0.62rem] tracking-[0.14em] text-white/80 transition-opacity hover:opacity-70 sm:text-right"
           onClick={() => {
             const lenis = (window as Window & { __lenis?: { scrollTo: (v: number, o?: object) => void } }).__lenis;
-            if (lenis) lenis.scrollTo(0, { immediate: false, duration: 2.1 });
+            if (lenis) lenis.scrollTo(0, { immediate: false, duration: 2.8 });
             else window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >

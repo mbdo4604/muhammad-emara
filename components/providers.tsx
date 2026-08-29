@@ -14,12 +14,15 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
     if (prefersReducedMotion) return;
 
+    const isPhone = window.matchMedia("(max-width: 768px), (hover: none) and (pointer: coarse)").matches;
+
     const lenis = new Lenis({
-      duration: 2.1,
+      duration: isPhone ? 3.2 : 2.6,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      wheelMultiplier: 0.65,
-      touchMultiplier: 0.9,
+      // Lower = less distance per gesture → slower, silkier feel
+      wheelMultiplier: isPhone ? 0.45 : 0.55,
+      touchMultiplier: isPhone ? 0.32 : 0.5,
     });
 
     (window as Window & { __lenis?: Lenis }).__lenis = lenis;
