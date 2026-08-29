@@ -14,14 +14,20 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
     if (prefersReducedMotion) return;
 
+    const isPhone =
+      window.matchMedia("(max-width: 768px), (hover: none) and (pointer: coarse)")
+        .matches;
+
     const lenis = new Lenis({
-      // Same tempo everywhere — phone matches desktop smoothness
       duration: 2.6,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 0.55,
-      // Touch travels farther per gesture; keep it low so phone feels like desktop
-      touchMultiplier: 0.22,
+      // Phone: syncTouch was off before → native scroll felt too light/fast
+      syncTouch: isPhone,
+      syncTouchLerp: 0.035,
+      touchMultiplier: isPhone ? 0.1 : 0.45,
+      touchInertiaExponent: isPhone ? 3.2 : 1.7,
     });
 
     (window as Window & { __lenis?: Lenis }).__lenis = lenis;

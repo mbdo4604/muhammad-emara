@@ -19,9 +19,8 @@ export const site = {
   ],
   hero: {
     headline: ["IF IT'S NOT", "INTUITIVE,", "IT'S NOT DONE."],
-    subline: "UI/UX DESIGN FOR PRODUCTS THAT REFUSE TO BLEND IN.",
-    description:
-      "I DESIGN, BUILD, AND SHIP INTERFACES THAT CAPTURE ATTENTION AND DRIVE RESULTS.",
+    subline: "THERE'S NO SUCH THING AS PERFECT DESIGN.",
+    description: "JUST DESIGNERS WHO STOPPED TRYING TO GET CLOSER.",
     cta: "GET IN TOUCH",
   },
   brandBar: [
