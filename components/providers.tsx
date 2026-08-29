@@ -14,9 +14,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
     if (prefersReducedMotion) return;
 
-    const isPhone =
-      window.matchMedia("(max-width: 768px), (hover: none) and (pointer: coarse)")
-        .matches;
+    // Width-only: phone Desktop Mode reports a wide viewport → treat as desktop
+    const isPhone = window.matchMedia("(max-width: 767.98px)").matches;
 
     const lenis = new Lenis({
       duration: 2.4,

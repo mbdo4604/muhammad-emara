@@ -9,9 +9,19 @@ export function SiteLock() {
     const onKeyDown = (event: KeyboardEvent) => {
       const key = event.key.toLowerCase();
       const mod = event.ctrlKey || event.metaKey;
-      if (mod && ["a", "c", "x", "s", "u", "p"].includes(key)) {
+
+      // Block zoom shortcuts + common copy/save shortcuts
+      if (mod && ["a", "c", "x", "s", "u", "p", "+", "=", "-", "_", "0"].includes(key)) {
         event.preventDefault();
       }
+      if (key === "+" || key === "-" || key === "=") {
+        if (mod) event.preventDefault();
+      }
+    };
+
+    // Block Ctrl/Cmd + wheel zoom (desktop)
+    const onWheel = (event: WheelEvent) => {
+      if (event.ctrlKey || event.metaKey) event.preventDefault();
     };
 
     document.addEventListener("contextmenu", block);
@@ -20,6 +30,7 @@ export function SiteLock() {
     document.addEventListener("copy", block);
     document.addEventListener("cut", block);
     document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("wheel", onWheel, { passive: false });
     document.addEventListener("gesturestart", block);
     document.addEventListener("gesturechange", block);
     document.addEventListener("gestureend", block);
@@ -31,6 +42,7 @@ export function SiteLock() {
       document.removeEventListener("copy", block);
       document.removeEventListener("cut", block);
       document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("wheel", onWheel);
       document.removeEventListener("gesturestart", block);
       document.removeEventListener("gesturechange", block);
       document.removeEventListener("gestureend", block);
