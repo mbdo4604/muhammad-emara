@@ -22,6 +22,7 @@
   --font-display: var(--font-lama-expanded);
   --font-body: var(--font-lama);
   --font-quote: var(--font-lama-expanded);
+  --font-brand: var(--font-syncopate);
 }
 
 * {
@@ -99,6 +100,15 @@ a img {
 /* Lama Expanded display */
 .display {
   font-family: var(--font-lama-expanded), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+/* EMARA wordmark only — Syncopate (pre-Lama) */
+.brand-mark {
+  font-family: var(--font-syncopate), sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 0.95;
@@ -188,7 +198,7 @@ a img {
   align-items: center;
   justify-content: center;
   border: 1.5px solid #fff;
-  font-family: var(--font-lama-expanded), sans-serif;
+  font-family: var(--font-syncopate), sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   line-height: 1;

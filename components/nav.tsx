@@ -184,7 +184,7 @@ export function Nav() {
         <div className="shell relative z-[130] flex h-[3.75rem] items-center justify-between md:h-[4.5rem]">
           <Link
             href="/"
-            className="display text-[0.95rem] tracking-[0.06em] md:text-[1.05rem]"
+            className="brand-mark text-[0.95rem] tracking-[0.06em] md:text-[1.05rem]"
             onClick={closeMenu}
           >
             {site.brand}

@@ -1,8 +1,16 @@
 import type { Metadata, Viewport } from "next";
+import { Syncopate } from "next/font/google";
 import localFont from "next/font/local";
 import { Providers } from "@/components/providers";
 import { site } from "@/content/site";
 import "./globals.css";
+
+const syncopate = Syncopate({
+  subsets: ["latin"],
+  variable: "--font-syncopate",
+  weight: ["400", "700"],
+  display: "swap",
+});
 
 const lama = localFont({
   src: [
@@ -58,7 +66,7 @@ export default function RootLayout({
     <html
       lang="en"
       dir="ltr"
-      className={`${lama.variable} ${lamaExpanded.variable} h-full`}
+      className={`${syncopate.variable} ${lama.variable} ${lamaExpanded.variable} h-full`}
     >
       <body className="min-h-full bg-[var(--forma-red)] text-white antialiased">
         <Providers>{children}</Providers>
