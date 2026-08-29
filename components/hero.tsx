@@ -81,15 +81,17 @@ export function Hero() {
                   </span>
                 ))}
               </h1>
-              <p className="mt-7 max-w-[28rem] text-[clamp(1.05rem,1.55vw,1.4rem)] font-medium leading-[1.4] tracking-[0.01em] text-white">
-                {site.hero.subline}
-              </p>
             </div>
 
             <div className="flex flex-col items-end justify-center pt-16">
-              <p className="max-w-[28rem] text-right text-[clamp(1.05rem,1.55vw,1.4rem)] font-medium leading-[1.4] tracking-[0.01em] text-white">
-                {site.hero.description}
-              </p>
+              <div className="max-w-[30rem] space-y-4 text-right">
+                <p className="text-[clamp(1.2rem,1.85vw,1.7rem)] font-light leading-[1.35] tracking-[0.01em] text-white">
+                  {site.hero.subline}
+                </p>
+                <p className="text-[clamp(1.2rem,1.85vw,1.7rem)] font-light leading-[1.35] tracking-[0.01em] text-white">
+                  {site.hero.description}
+                </p>
+              </div>
               <a
                 href={`mailto:${site.email}`}
                 className="btn-white mt-8 !bg-white !text-[#1a0508]"

@@ -19,15 +19,15 @@ export function Providers({ children }: { children: React.ReactNode }) {
         .matches;
 
     const lenis = new Lenis({
-      duration: 2.6,
+      duration: 2.4,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 0.55,
-      // Phone: smooth + moderately heavy (not as locked as before)
+      // Phone: light + smooth (much less drag than before)
       syncTouch: isPhone,
-      syncTouchLerp: 0.055,
-      touchMultiplier: isPhone ? 0.22 : 0.45,
-      touchInertiaExponent: isPhone ? 2.2 : 1.7,
+      syncTouchLerp: 0.085,
+      touchMultiplier: isPhone ? 0.65 : 0.45,
+      touchInertiaExponent: isPhone ? 1.7 : 1.7,
     });
 
     (window as Window & { __lenis?: Lenis }).__lenis = lenis;
