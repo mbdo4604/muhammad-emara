@@ -84,14 +84,9 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col items-end justify-center pt-16">
-              <div className="max-w-[30rem] space-y-4 text-right">
-                <p className="text-[clamp(1.2rem,1.85vw,1.7rem)] font-light leading-[1.35] tracking-[0.01em] text-white">
-                  {site.hero.subline}
-                </p>
-                <p className="text-[clamp(1.2rem,1.85vw,1.7rem)] font-light leading-[1.35] tracking-[0.01em] text-white">
-                  {site.hero.description}
-                </p>
-              </div>
+              <p className="hero-quote max-w-[32rem] text-right text-[clamp(1.15rem,1.7vw,1.55rem)] leading-[1.45] text-white">
+                {site.hero.subline} {site.hero.description}
+              </p>
               <a
                 href={`mailto:${site.email}`}
                 className="btn-white mt-8 !bg-white !text-[#1a0508]"

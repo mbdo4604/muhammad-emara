@@ -21,6 +21,7 @@
   --color-line: var(--forma-line);
   --font-display: var(--font-syncopate);
   --font-body: var(--font-manrope);
+  --font-quote: var(--font-lama-expanded);
 }
 
 * {
@@ -109,6 +110,12 @@ a img {
   font-weight: 500;
   letter-spacing: 0.11em;
   text-transform: uppercase;
+}
+
+.hero-quote {
+  font-family: var(--font-lama-expanded), sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.01em;
 }
 
 .btn-white {
