@@ -84,8 +84,12 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col items-end justify-center pt-16">
-              <p className="hero-quote max-w-[34rem] text-right text-[clamp(1.15rem,1.7vw,1.55rem)] leading-[1.45] text-white">
-                {site.hero.quote}
+              <p className="hero-quote max-w-[28rem] text-right text-[clamp(1.15rem,1.7vw,1.55rem)] leading-[1.35] text-white">
+                {site.hero.quote.map((line, i) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
               </p>
               <a
                 href={`mailto:${site.email}`}

@@ -19,8 +19,12 @@ export const site = {
   ],
   hero: {
     headline: ["IF IT'S NOT", "INTUITIVE,", "IT'S NOT DONE."],
-    quote:
-      "There's no such thing as perfect design just designers who stopped trying to get closer",
+    quote: [
+      "There's no such thing",
+      "as perfect design",
+      "just designers who stopped",
+      "trying to get closer",
+    ],
     cta: "GET IN TOUCH",
   },
   brandBar: [
