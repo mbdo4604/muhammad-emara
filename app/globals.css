@@ -106,13 +106,24 @@ a img {
   text-transform: uppercase;
 }
 
-/* EMARA wordmark only — Syncopate (pre-Lama) */
+/* EMARA wordmark only — Syncopate (pre-Lama), optically heavier */
 .brand-mark {
   font-family: var(--font-syncopate), sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 0.95;
   text-transform: uppercase;
+  -webkit-text-stroke: 0.028em currentColor;
+  paint-order: stroke fill;
+}
+
+.brand-mark-hero {
+  -webkit-text-stroke: 0.06em currentColor;
+  text-shadow:
+    0.01em 0 currentColor,
+    -0.01em 0 currentColor,
+    0 0.01em currentColor,
+    0 -0.01em currentColor;
 }
 
 .caps {
