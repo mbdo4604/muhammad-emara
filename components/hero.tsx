@@ -5,7 +5,7 @@ import { site } from "@/content/site";
 
 /**
  * Mobile: portrait-mobile.png (full quality source)
- * Desktop: original portrait.png (pre-new-upload)
+ * Desktop: portrait-desktop.png (full quality source)
  */
 export function Hero() {
   return (
@@ -23,7 +23,7 @@ export function Hero() {
           className="object-cover object-[center_28%] md:hidden"
         />
         <Image
-          src="/images/portrait.png"
+          src="/images/portrait-desktop.png"
           alt=""
           fill
           priority
