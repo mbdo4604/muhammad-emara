@@ -31,7 +31,7 @@ export function Hero() {
           unoptimized
           draggable={false}
           sizes="(min-width: 768px) 100vw, 0px"
-          className="hidden object-cover object-[78%_70%] md:block"
+          className="hidden object-cover object-[78%_82%] md:block"
           aria-hidden
         />
       </div>
