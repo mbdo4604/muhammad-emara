@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: site.title,
     description: site.description,
-    images: ["/images/portrait-desktop.png"],
+    images: ["/images/portrait.png"],
     type: "website",
   },
 };

@@ -5,7 +5,7 @@ import { site } from "@/content/site";
 
 /**
  * Mobile: portrait-mobile.png (full quality source)
- * Desktop: portrait-desktop.png (full quality source)
+ * Desktop: original portrait.png (pre-new-upload)
  */
 export function Hero() {
   return (
@@ -23,7 +23,7 @@ export function Hero() {
           className="object-cover object-[center_28%] md:hidden"
         />
         <Image
-          src="/images/portrait-desktop.png"
+          src="/images/portrait.png"
           alt=""
           fill
           priority
@@ -31,7 +31,7 @@ export function Hero() {
           unoptimized
           draggable={false}
           sizes="(min-width: 768px) 100vw, 0px"
-          className="hidden object-cover object-[78%_92%] md:block"
+          className="hidden object-cover object-[78%_18%] md:block"
           aria-hidden
         />
       </div>
