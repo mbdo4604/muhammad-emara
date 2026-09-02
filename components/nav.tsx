@@ -265,13 +265,22 @@ export function Nav() {
 
             <motion.div className="mt-auto space-y-5 text-center" variants={footerBlock}>
               <div className="flex items-center justify-center gap-5">
-                {["Fb", "Ig", "Be", "Yt"].map((label) => (
-                  <span
+                {(
+                  [
+                    { label: "Li", href: site.socials.linkedin },
+                    { label: "Be", href: site.socials.behance },
+                    { label: "Ig", href: site.socials.instagram },
+                  ] as const
+                ).map(({ label, href }) => (
+                  <a
                     key={label}
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/35 text-[0.58rem] uppercase tracking-wider text-white/80"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/35 text-[0.58rem] uppercase tracking-wider text-white/80 transition-opacity hover:opacity-65"
                   >
                     {label}
-                  </span>
+                  </a>
                 ))}
               </div>
 

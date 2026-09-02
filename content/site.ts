@@ -4,12 +4,12 @@ export const site = {
   title: "Muhammad Emara — UI/UX Designer",
   description:
     "UI/UX designer based in Cairo. Product interfaces, design systems, and mobile experiences.",
-  email: "hello@muhammademara.com",
+  email: "mooabdelmaqsoud@gmail.com",
   location: "Cairo, EG",
   socials: {
-    linkedin: "",
-    behance: "",
-    github: "",
+    linkedin: "https://www.linkedin.com/in/mohamedabdelmaksoudamara/",
+    behance: "https://www.behance.net/mohammaabdelm1",
+    instagram: "https://www.instagram.com/mohamed.abdelmksod/",
   },
   nav: [
     { label: "PROJECTS", href: "#work" },
@@ -90,7 +90,7 @@ export const site = {
   contact: {
     heading: "LET'S CREATE SOMETHING REMARKABLE TOGETHER.",
     cta: "GET IN TOUCH",
-    email: "hello@muhammademara.com",
+    email: "mooabdelmaqsoud@gmail.com",
   },
   footer: {
     copyright: "© 2026 MUHAMMAD EMARA",
