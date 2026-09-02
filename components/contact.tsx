@@ -1,6 +1,7 @@
 "use client";
 
 import { Reveal } from "@/components/reveal";
+import { SocialLinks } from "@/components/social-icons";
 import { site } from "@/content/site";
 
 export function Contact() {
@@ -12,19 +13,22 @@ export function Contact() {
             {site.contact.heading}
           </h2>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a
-              href={`mailto:${site.email}`}
-              className="btn-white !bg-white !text-[#1a0508]"
-            >
-              {site.contact.cta}
-            </a>
-            <a
-              href={`mailto:${site.email}`}
-              className="caps text-[0.68rem] tracking-[0.12em] text-white/80"
-            >
-              {site.contact.email}
-            </a>
+          <div className="mt-10 flex flex-col gap-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a
+                href={`mailto:${site.email}`}
+                className="btn-white !bg-white !text-[#1a0508]"
+              >
+                {site.contact.cta}
+              </a>
+              <a
+                href={`mailto:${site.email}`}
+                className="caps text-[0.68rem] tracking-[0.12em] text-white/80"
+              >
+                {site.contact.email}
+              </a>
+            </div>
+            <SocialLinks />
           </div>
         </Reveal>
       </div>

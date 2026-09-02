@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { SocialLinks } from "@/components/social-icons";
 import { site } from "@/content/site";
 
 const expo = [0.87, 0, 0.13, 1] as const;
@@ -264,25 +265,7 @@ export function Nav() {
             </motion.nav>
 
             <motion.div className="mt-auto space-y-5 text-center" variants={footerBlock}>
-              <div className="flex items-center justify-center gap-5">
-                {(
-                  [
-                    { label: "Li", href: site.socials.linkedin },
-                    { label: "Be", href: site.socials.behance },
-                    { label: "Ig", href: site.socials.instagram },
-                  ] as const
-                ).map(({ label, href }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/35 text-[0.58rem] uppercase tracking-wider text-white/80 transition-opacity hover:opacity-65"
-                  >
-                    {label}
-                  </a>
-                ))}
-              </div>
+              <SocialLinks className="justify-center" />
 
               <p className="text-[0.85rem] text-white/75">
                 Let&apos;s create something remarkable together.
